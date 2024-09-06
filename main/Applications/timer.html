@@ -11,9 +11,9 @@
     <script>
         var time
         async function end() {
-            var audio = new Audio("./audio_file.mp3");
-            await audio.play();
-            alert("Your time is up") 
+            // var audio = new Audio("./audio_file.mp3");
+            // await audio.play();
+            alert("Your time is up")
         };
         time = prompt("How many minutes?");
         setTimeout(end,time*60*1000);
