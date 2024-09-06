@@ -12,7 +12,8 @@
         var time
         async function end() {
             var audio = new Audio("./audio_file.mp3");
-            // await audio.play();
+            await audio.play();
+            console.log("audio is done playing")
             alert("Your time is up")
         };
         time = prompt("How many minutes?");
