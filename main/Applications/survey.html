@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
-    <h1>Survey</h1>
-    <script>
-        let fav_color
-        let age
-        let country
-        fav_color = prompt("What is your favorite color?");
-        age = prompt("How old are you?");
-        country = prompt("What country do you live in?");
-        //prompts info
-        localStorage.setItem("fav_color",fav_color);
-        localStorage.setItem("age",age);
-        localStorage.setItem("country",country);
-        //stores info
-    </script>
 </head>
 <body>
-
+    <h1>Survey</h1>
+    <form action="http://127.0.0.1:8000/hi" method="POST">
+        <h3>What is your favorite color?</h3>
+        <input type="text" name="favcolor" placeholder="Favorite Color">
+        <input type="color" name="color">
+        <h3>What country are you from?</h3>
+        <input type="text" name="country" placeholder="Country">
+        <h3>Gender</h3>
+        <input type="text" name="Gender" placeholder="Gender">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+    
 </body>
 </html>
