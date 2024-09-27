@@ -1,15 +1,21 @@
 from typing import Annotated
 from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse
+import csv 
+# setup favicon
+# host server on aws so it can be accessed from the internet
+# get james setup with ssh credentials into server so he can see the data
+
 
 app = FastAPI()
 
-@app.post("/hi")
+@app.post("/favcolor-survey")
 def color_form(favcolor:Annotated[str, Form()], color: Annotated[str, Form()], country: Annotated[str, Form()],Gender: Annotated[str, Form()]):
-    # save to a csv file
-    # host server on aws so it can be accessed from the internet
-    # get james setup with ssh credentials into server so he can see the data
-    print(favcolor, color, country, Gender)
+
+    with open("color.csv","a") as f:
+        w = csv.writer(f)
+        w.writerow([favcolor,color,country, Gender])
+
     html_content = """
     <!DOCTYPE html>
         <html lang="en">
@@ -34,3 +40,4 @@ def color_form(favcolor:Annotated[str, Form()], color: Annotated[str, Form()], c
         </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
