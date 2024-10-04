@@ -29,7 +29,7 @@ def color_form(favcolor:Annotated[str, Form()], color: Annotated[str, Form()], c
         />
         </head>
         <body>
-            <h1>hi</h1>
+            <h1>Submitted</h1>
             <p>thanks for your response!</p>
             <button style="background-color: aliceblue;">
                 <a href="https://idugan100.github.io/JMathSphere/">Home</a>
