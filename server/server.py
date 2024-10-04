@@ -2,7 +2,6 @@ from typing import Annotated
 from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse
 import csv 
-# setup favicon
 # host server on aws so it can be accessed from the internet
 # get james setup with ssh credentials into server so he can see the data
 
